@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
-
+import { Wave, Random } from "react-animated-text";
 import { useSprings, a, animated, useSpring } from "@react-spring/three";
+import $ from "jquery";
 import "./home.css";
+let visible = {
+  visible: true,
+};
 const number = 35;
 const colors = [
-  "#A2CCB6",
-  "#FCEEB5",
-  "#EE786E",
+  "#2C061F",
+  "#374045",
+  "#D89216",
   "#e0feff",
   "lightpink",
-  "lightblue",
+  "#E1D89F",
 ];
 const random = (i) => {
   const r = Math.random();
@@ -33,7 +37,7 @@ function Content() {
   const [springs, set] = useSprings(number, (i) => ({
     from: random(i),
     ...random(i),
-    config: { mass: 200, tension: 50, friction: 50 },
+    config: { mass: 500, tension: 50, friction: 50 },
   }));
   useEffect(
     () =>
@@ -75,9 +79,21 @@ function Lights() {
 }
 
 const Home = () => {
-  const [visible, setVisible] = React.useState(true);
   return (
-    <section className="home">
+    <section
+      className="home"
+      onClick={() => {
+        if (visible.visible == true) {
+          document.querySelector(".title").classList.remove("fadeOut");
+          document.querySelector(".title").classList.add("fadeIn");
+          visible.visible = false;
+        } else {
+          document.querySelector(".title").classList.remove("fadeIn");
+          document.querySelector(".title").classList.add("fadeOut");
+          visible.visible = true;
+        }
+      }}
+    >
       <Canvas
         linear
         flat
@@ -88,6 +104,9 @@ const Home = () => {
         <Lights />
         <Content />
       </Canvas>
+      <h2 className="title">
+        eda <span>bilgili</span>
+      </h2>
     </section>
   );
 };

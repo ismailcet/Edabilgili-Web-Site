@@ -1,6 +1,5 @@
 .navbar{
-    display: none;
-    background-color: transparent;
+    background-color: #0E0B16;
 }
 .container{
     padding:1.5rem 4rem;
@@ -11,11 +10,11 @@
     justify-content: space-between;
 }
 .name{
-    color: #42B0E2;
+    color: #E7DFDD;
     text-transform: uppercase;
 }
 .name span{
-    color:#42B0E2;
+    color:#E7DFDD;
 }
 .nav-items{
     display:flex;
@@ -26,10 +25,10 @@
 }
 .nav-item a{
     font-size: 1.25rem;
-    color:#42B0E2;
+    color:#E7DFDD;
 }
 .nav-item:hover{
-    border-bottom: 2px solid #42B0E2;
+    border-bottom: 2px solid #E7DFDD;
 }
 .nav-item:not(.nav-item:last-child){
     margin-right: 5rem;
