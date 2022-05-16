@@ -1,21 +1,22 @@
 .navbar{
-    background-color: #0E0B16;
+    background-color: #EEEEEE;
+    height:15vh;
+    display:grid;
+    align-content:center;
 }
 .container{
-    padding:1.5rem 4rem;
+    padding:0 8rem;
 }
 .navbar .container{
     display:flex;
     align-items: center;
     justify-content: space-between;
 }
-.name{
-    color: #E7DFDD;
-    text-transform: uppercase;
+.navbar img{
+    width: 150px;
+    height: 150px;
 }
-.name span{
-    color:#E7DFDD;
-}
+
 .nav-items{
     display:flex;
     align-items: center;
@@ -25,10 +26,10 @@
 }
 .nav-item a{
     font-size: 1.25rem;
-    color:#E7DFDD;
+    color:#e44d26;
 }
 .nav-item:hover{
-    border-bottom: 2px solid #E7DFDD;
+    border-bottom: 2px solid #17242A;
 }
 .nav-item:not(.nav-item:last-child){
     margin-right: 5rem;

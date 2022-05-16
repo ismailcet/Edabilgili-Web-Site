@@ -4,9 +4,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <section className="container">
-        <h2 className="name">
-          Eda <span>Bilgili</span>
-        </h2>
+        <img
+          src={require("../images/EdaBilgiliLogo.png")}
+          alt="Eda Bilgili Logo"
+          className="logo"
+        />
         <ul className="nav-items">
           <li className="nav-item">
             <a href="#">About</a>

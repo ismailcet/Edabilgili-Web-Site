@@ -1,0 +1,29 @@
+.about{
+    height: 100vh;
+    background-color:#EEEEEE;
+    padding-top: 4rem;
+}
+.about .title{
+    font-size: 4rem;
+}
+.about .container{
+    display: flex;
+    align-items: center;
+    color: #7d7b7b; 
+}
+.info{
+    width: 50%;
+}
+.info-title{
+    font-size: 3rem;
+}
+.content-title{
+    font-size: 1rem;
+    font-weight:700;
+}
+.img-content{
+    width: 50%;
+}
+.img-content img{
+    width: 100%;
+}
