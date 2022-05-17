@@ -10,6 +10,8 @@ const About = () => {
   return (
     <section className="about">
       <h2 className="title">Hakkımda</h2>
+      <div className="underline"></div>
+
       <div className="container">
         <div className="info">
           <h3 className="info-title">Ne Yapıyorum?</h3>

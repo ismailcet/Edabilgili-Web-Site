@@ -12,6 +12,7 @@ function App() {
       <section className="main">
         <Home></Home>
         <About></About>
+        <Projects></Projects>
       </section>
     </main>
   );

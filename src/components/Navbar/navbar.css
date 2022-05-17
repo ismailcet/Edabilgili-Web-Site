@@ -1,8 +1,11 @@
 .navbar{
-    background-color: #EEEEEE;
-    height:15vh;
-    display:grid;
+    background-color: transparent;
+    position: fixed;
+    display:flex;
     align-content:center;
+    z-index: 99;
+    width: 100%;
+    justify-content: space-between;
 }
 .container{
     padding:0 8rem;
@@ -11,6 +14,7 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 .navbar img{
     width: 150px;
@@ -36,4 +40,22 @@
 }
 .active{
     display: block;
+}
+@keyframes fadeInDown{
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+.nav-display{
+    background-color: #EEEEEE;
+    height: 15vh;
+    transition: padding 0.21s ease-out, background 0.21s ease-out, border 0.21s ease-out;
+    animation-name:fadeInDown;
+    animation-duration: .7s;
 }

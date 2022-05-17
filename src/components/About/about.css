@@ -1,7 +1,7 @@
 .about{
     height: 100vh;
     background-color:#EEEEEE;
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 .about .title{
     font-size: 4rem;
@@ -16,14 +16,27 @@
 }
 .info-title{
     font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
 }
 .content-title{
     font-size: 1rem;
     font-weight:700;
+    margin-bottom:1.5rem;
 }
 .img-content{
     width: 50%;
+    padding-left: 4rem;
 }
 .img-content img{
     width: 100%;
+}
+.item{
+    font-size: 1.5rem;
+    font-weight: 300;
+}   
+.item-icon{
+    color:#e44d26;
+    font-size: 2rem;
+    margin-right: 2rem;
 }

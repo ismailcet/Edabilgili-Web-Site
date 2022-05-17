@@ -1,0 +1,14 @@
+.projects{
+    height: 100vh;
+    background-color:#EEEEEE;
+    padding-top: 2rem;
+}
+.projects .title{
+    font-size: 4rem;
+}
+.underline{
+    height:.15rem;
+    width:25rem;
+    background-color:#e44d26;
+    margin: 0 auto;
+}

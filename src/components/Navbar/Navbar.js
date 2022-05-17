@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+  const controlNav = () => {
+    console.log(window.scrollY);
+    if (typeof window !== "undefined") {
+      if (window.scrollY > 0) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    }
+  };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNav);
+
+      return () => {
+        window.removeEventListener("scroll", controlNav);
+      };
+    }
+  });
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${show && "nav-display"}`}>
       <section className="container">
         <img
           src={require("../images/EdaBilgiliLogo.png")}
@@ -11,7 +31,7 @@ const Navbar = () => {
         />
         <ul className="nav-items">
           <li className="nav-item">
-            <a href="#">About</a>
+            <a href="about">About</a>
           </li>
           <li className="nav-item">
             <a href="#">Projects</a>
