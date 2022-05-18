@@ -1,7 +1,8 @@
 .projects{
-    height: 100vh;
+    height: auto;
     background-color:#EEEEEE;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .projects .title{
     font-size: 4rem;
@@ -12,3 +13,97 @@
     background-color:#e44d26;
     margin: 0 auto;
 }
+.projects-content{
+    margin-top: 2rem;
+}
+.projects-items{
+    display:grid;
+    place-items: center;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:2rem;
+}
+.projects-item{
+    position: relative;
+}
+.projects-item img{
+    border-radius:.5rem;
+}
+@keyframes fadeInDown{
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: none;
+    }
+}
+.project-overlay{
+    opacity:0.5;
+    display: none;
+    height: 220px;
+    width: 320px;
+    position:absolute;
+    top: 0;
+    left:0;
+    color: #e44d26;
+    background-color:#EEEEEE;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+.project-title{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInAnimationText linear .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+@keyframes fadeInAnimationText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.active{
+    display: block;
+}
+.modal {
+    font-size: 12px;
+  }
+.modal .popup-image{
+    width:100%;
+}
+  .modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+  }
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }

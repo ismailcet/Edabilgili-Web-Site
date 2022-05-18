@@ -3,7 +3,6 @@ import "./navbar.css";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const controlNav = () => {
-    console.log(window.scrollY);
     if (typeof window !== "undefined") {
       if (window.scrollY > 0) {
         setShow(true);

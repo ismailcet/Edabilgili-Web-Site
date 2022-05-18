@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as THREE from "three";
-import { Canvas } from "@react-three/fiber";
-import { Wave, Random } from "react-animated-text";
-import { useSprings, a, animated, useSpring } from "@react-spring/three";
-import $ from "jquery";
+
 import "./home.css";
 let visible = {
   visible: true,
