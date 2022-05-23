@@ -1,0 +1,8 @@
+.contact{
+    height: 100vh;
+    background-color:#EEEEEE;
+    padding-top: 2rem;
+}
+.contact .title{
+    font-size: 4rem;
+}

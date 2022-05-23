@@ -47,14 +47,18 @@ const Projects = () => {
                     <button className="close" onClick={close}>
                       &times;
                     </button>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="popup-image"
-                    />
+                    <div className="modal-content">
+                      <div className="image-container">
+                        <img src={item.image} alt={item.name} />
+                      </div>
+                      <div className="info-content">
+                        <h4 className="name">{item.name}</h4>
+                        <p className="info-text">{item.text}</p>
+                      </div>
+                    </div>
                     <div className="actions">
                       <button
-                        className="button"
+                        className="popup-btn"
                         onClick={() => {
                           console.log("modal closed ");
                           close();
