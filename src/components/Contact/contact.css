@@ -9,3 +9,29 @@
 .contact .title{
     font-size: 4rem;
 }
+.contact-info{
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    justify-items: center;
+    grid-template-columns: repeat(3,25%);
+    margin: 4rem auto 0;
+}
+
+.contact-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-info .item-icon{
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.contact-info p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.25rem;
+}

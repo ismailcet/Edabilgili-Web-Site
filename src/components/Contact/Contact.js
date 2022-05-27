@@ -1,16 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMobileScreen,
   faLocationDot,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_w5a3vad",
+        "template_ioq9w8h",
+        {
+          subject: `${form.current.user_name.value}`,
+          name: `${form.current.user_name.value}`,
+          email: `${form.current.user_email.value}`,
+          message: `${form.current.message.value}`,
+        },
+        "-qZF-DCDp7zTH8ZLD"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <section className="contact">
       <div className="title-contact">
-        <h2 className="title">Iletişim</h2>
+        <h2 className="title">Contact</h2>
         <div className="underline"></div>
       </div>
       <div className="contact-info">
@@ -30,7 +55,18 @@ const Contact = () => {
           <p className="email-address">lorem@lorem.com</p>
         </div>
       </div>
-      <div className="email-send"></div>
+      <div className="email-form">
+        <h3 className="form-title">Send Email</h3>
+        <form ref={form} className="email-send" onSubmit={sendEmail}>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" />
+        </form>
+      </div>
     </section>
   );
 };

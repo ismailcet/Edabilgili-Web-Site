@@ -9,7 +9,7 @@ import "./about.css";
 const About = () => {
   return (
     <section className="about">
-      <h2 className="title">Hakkımda</h2>
+      <h2 className="title">About</h2>
       <div className="underline"></div>
 
       <div className="container">
