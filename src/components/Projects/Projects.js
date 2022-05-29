@@ -14,7 +14,7 @@ const Projects = () => {
     projectItem.children[1].classList.remove("active");
   };
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="title-content">
         <h2 className="title">Projects</h2>
         <div className="underline"></div>

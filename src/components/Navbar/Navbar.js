@@ -23,20 +23,23 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${show && "nav-display"}`}>
       <section className="container">
-        <img
-          src={require("../images/EdaBilgiliLogo.png")}
-          alt="Eda Bilgili Logo"
-          className="logo"
-        />
+        <a href="#home">
+          <img
+            src={require("../images/EdaBilgiliLogo.png")}
+            alt="Eda Bilgili Logo"
+            className="logo"
+          />
+        </a>
+
         <ul className="nav-items">
           <li className="nav-item">
-            <a href="about">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="nav-item">
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li className="nav-item">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </section>

@@ -27,13 +27,15 @@
 }
 .nav-item{
     font-size: 1.25rem;
+    transition: all .5s linear;
 }
 .nav-item a{
     font-size: 1.25rem;
     color:#e44d26;
+    transition: all .5s linear;
 }
-.nav-item:hover{
-    border-bottom: 2px solid #17242A;
+.nav-item a:hover{
+    border-bottom: 2px solid #e44d26;
 }
 .nav-item:not(.nav-item:last-child){
     margin-right: 5rem;

@@ -11,16 +11,12 @@ const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    console.log(`${form.current.user_name.value}`);
     emailjs
       .sendForm(
         "service_w5a3vad",
         "template_ioq9w8h",
-        {
-          subject: `${form.current.user_name.value}`,
-          name: `${form.current.user_name.value}`,
-          email: `${form.current.user_email.value}`,
-          message: `${form.current.message.value}`,
-        },
+        form.current,
         "-qZF-DCDp7zTH8ZLD"
       )
       .then(
@@ -31,9 +27,10 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    e.target.reset();
   };
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="title-contact">
         <h2 className="title">Contact</h2>
         <div className="underline"></div>
@@ -57,14 +54,36 @@ const Contact = () => {
       </div>
       <div className="email-form">
         <h3 className="form-title">Send Email</h3>
+        <div className="underline"></div>
         <form ref={form} className="email-send" onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="user_name" />
-          <label>Email</label>
-          <input type="email" name="user_email" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
+          <input
+            type="text"
+            name="user_name"
+            className="form-item"
+            id="user_name"
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            name="user_email"
+            className="form-item"
+            id="user_email"
+            placeholder="Email"
+          />
+          <input
+            type="number"
+            name="user_number"
+            className="form-item"
+            id="user_number"
+            placeholder="Number"
+          />
+          <textarea
+            name="message"
+            className="form-item"
+            id="message"
+            placeholder="Message"
+          />
+          <input type="submit" value="Send" className="btn-email" />
         </form>
       </div>
     </section>

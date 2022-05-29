@@ -1,5 +1,5 @@
 .contact{
-    height: 100vh;
+    height: 120vh;
     background-color:#EEEEEE;
     padding-top: 2rem;
 }
@@ -34,4 +34,83 @@
     text-align: center;
     font-weight: 300;
     font-size: 1.25rem;
+}
+/* Email Section */
+.email-form{
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    justify-items: center;
+    margin: 4rem auto 0;
+}
+.form-title{
+    font-size:2rem;
+    font-weight:400;
+    letter-spacing:1rem;
+    text-transform: uppercase;
+    color:#e44d26;
+    text-align:center;
+    margin-bottom:1.5rem;
+}
+.email-form .underline{
+    height: .1rem;
+    width: 25rem;
+    background-color: #e44d26;
+    margin: 0 auto 4rem;
+}
+.email-send{
+    width: 1080px;
+    max-width: 100%;
+}
+#user_name,#message{
+    width: 100%;
+}
+#user_email,#user_number{
+    width: 49.2%;
+    margin-bottom: 1rem;
+}
+.form-item{
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background-color: transparent;
+    border: 2px solid #e44d26;
+    font-size:1.5rem;
+    transition: all .5s linear
+}
+.form-item::placeholder{
+    font-size:1.5rem;
+}
+.form-item:focus{
+    outline:2px solid #EEEEEE;
+}
+#user_name{
+    margin-bottom: 1rem;
+}
+#user_email{
+    margin-right: 1rem;
+}
+#message{
+    height: 5rem;
+}
+.btn-email{
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #e44d26;
+    outline:none;
+    border-color: transparent;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing:.25rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    transition:all .5s cubic-bezier(1, 0.01, 1, 1.02);
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.btn-email:hover{
+    background-color:#e44d26;
+    color: #fff;
 }
